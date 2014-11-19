@@ -383,7 +383,7 @@
 
       $("#kernjs_overlay").addClass('kernjs_animate');
 
-      if ($.browser.webkit) {
+      if (true || $.browser.webkit) {
         transitionEnd = "webkitTransitionEnd";
       } else if ($.browser.mozilla) {
         transitionEnd = "transitionend";
