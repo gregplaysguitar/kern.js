@@ -64,7 +64,7 @@
       opacity: 1
     });
 
-    $("#kernjs_input button").click(function () {
+    $("#kernjs_input button").on('click', function () {
       $("#kernjs_input button").removeClass('active');
       transformFlag = $(this).addClass('active').attr('value');
     });
@@ -232,7 +232,7 @@
       }
     }
 
-    $("h1, h2, h3, h4, h5, h6").click(function (event) { // Activate a word
+    $("h1, h2, h3, h4, h5, h6").on('click', function (event) { // Activate a word
       var emRatio, el, previousColor, theHtml, elid;
       elid = ""; // if the user clicks on a header element with an ID, elid is set to be equal to the ID of the header element.
       event.preventDefault(); // Prevent headers that are also links from following the URL while Kern.JS is active.
@@ -372,12 +372,12 @@
       }
     });
 
-    $("#kernjs_textarea").live('click', function () {
+    $("body").on('click', '#kernjs_textarea', function () {
       $(this).focus();
       $(this).select();
     });
 
-    $("#kernjs_generate").click(function () {
+    $("#kernjs_generate").on('click', function () {
       var outputHTML = '';
       var transitionEnd = "TransitionEnd";
 
